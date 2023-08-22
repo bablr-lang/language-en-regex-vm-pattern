@@ -1,0 +1,30 @@
+{
+  "name": "@bablr/miniparser-language-nonbacktracking-js-regex",
+  "version": "0.0.0",
+  "description": "A miniparser language for nonbacktracking JS-style regexes",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib/**/*.js"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "@bablr/grammar": "github:bablr-lang/grammar#f0a39a03a03db3f921c88698f65c1a4aa0f735d5"
+  },
+  "devDependencies": {
+    "enhanced-resolve": "^5.12.0",
+    "eslint": "^7.32.0",
+    "eslint-import-resolver-enhanced-resolve": "^1.0.5",
+    "eslint-plugin-import": "^2.27.5",
+    "expect": "^29.6.2",
+    "prettier": "^2.0.5"
+  },
+  "repository": "git@github.com:bablr-lang/miniparser-language-nonbacktracking-js-regex.git",
+  "author": "Conrad Buck <conartist6@gmail.com>",
+  "license": "MIT"
+}
