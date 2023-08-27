@@ -14,17 +14,23 @@
   ],
   "sideEffects": false,
   "dependencies": {
-    "@bablr/grammar": "github:bablr-lang/grammar#f0a39a03a03db3f921c88698f65c1a4aa0f735d5"
+    "@bablr/helpers": "github:bablr-lang/helpers#97d43d667a3532d6f0160fb4c999178073ab1bc0"
   },
   "devDependencies": {
+    "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e",
+    "@bablr/miniparser": "github:bablr-lang/miniparser#d457038d74aa68dd68443d6868592731a581c3b4",
     "enhanced-resolve": "^5.12.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.47.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
     "eslint-plugin-import": "^2.27.5",
     "expect": "^29.6.2",
     "prettier": "^2.0.5"
   },
+  "scripts": {
+    "build": "tsc"
+  },
   "repository": "git@github.com:bablr-lang/miniparser-language-nonbacktracking-js-regex.git",
+  "homepage": "https://github.com/bablr-lang/miniparser-language-nonbacktracking-js-regex",
   "author": "Conrad Buck <conartist6@gmail.com>",
   "license": "MIT"
 }
