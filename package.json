@@ -7,18 +7,16 @@
   },
   "type": "module",
   "exports": {
-    ".": "./lib/index.js"
+    ".": "./lib/language.js"
   },
   "files": [
     "lib/**/*.js"
   ],
   "sideEffects": false,
-  "dependencies": {
-    "@bablr/helpers": "github:bablr-lang/helpers#97d43d667a3532d6f0160fb4c999178073ab1bc0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e",
-    "@bablr/miniparser": "github:bablr-lang/miniparser#d457038d74aa68dd68443d6868592731a581c3b4",
+    "@bablr/miniparser": "github:bablr-lang/miniparser#e17fcf1a2e9c89e14ee047d8f1fe5469c916179f",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.47.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",

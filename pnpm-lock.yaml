@@ -2,8 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@bablr/eslint-config-base': github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e
-  '@bablr/helpers': github:bablr-lang/helpers#97d43d667a3532d6f0160fb4c999178073ab1bc0
-  '@bablr/miniparser': github:bablr-lang/miniparser#d457038d74aa68dd68443d6868592731a581c3b4
+  '@bablr/miniparser': github:bablr-lang/miniparser#e17fcf1a2e9c89e14ee047d8f1fe5469c916179f
   enhanced-resolve: ^5.12.0
   eslint: ^8.47.0
   eslint-import-resolver-enhanced-resolve: ^1.0.5
@@ -11,12 +10,9 @@ specifiers:
   expect: ^29.6.2
   prettier: ^2.0.5
 
-dependencies:
-  '@bablr/helpers': github.com/bablr-lang/helpers/97d43d667a3532d6f0160fb4c999178073ab1bc0
-
 devDependencies:
   '@bablr/eslint-config-base': github.com/bablr-lang/eslint-config-base/a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e_eslint@8.47.0
-  '@bablr/miniparser': github.com/bablr-lang/miniparser/d457038d74aa68dd68443d6868592731a581c3b4
+  '@bablr/miniparser': github.com/bablr-lang/miniparser/e17fcf1a2e9c89e14ee047d8f1fe5469c916179f
   enhanced-resolve: 5.15.0
   eslint: 8.47.0
   eslint-import-resolver-enhanced-resolve: 1.0.5
@@ -821,6 +817,7 @@ packages:
   /escape-string-regexp/5.0.0:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
+    dev: true
 
   /eslint-import-resolver-enhanced-resolve/1.0.5:
     resolution: {integrity: sha512-Ss07NWhqdeOHq+Jevl4f5gPqHoRKyNTSXUoLxP/dMCXUUCsowGFv7/ccJ4fMcAdeqL+WhfA/p4AYWbtY6fB0wQ==}
@@ -2000,23 +1997,8 @@ packages:
       - supports-color
     dev: true
 
-  github.com/bablr-lang/grammar/fa62bc72a6f4515b96fafc90c4cb64c407ef8033:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/grammar/tar.gz/fa62bc72a6f4515b96fafc90c4cb64c407ef8033}
-    name: '@bablr/grammar'
-    version: 0.0.0
-    dev: false
-
-  github.com/bablr-lang/helpers/97d43d667a3532d6f0160fb4c999178073ab1bc0:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/helpers/tar.gz/97d43d667a3532d6f0160fb4c999178073ab1bc0}
-    name: '@bablr/helpers'
-    version: 0.0.0
-    dependencies:
-      '@bablr/grammar': github.com/bablr-lang/grammar/fa62bc72a6f4515b96fafc90c4cb64c407ef8033
-      escape-string-regexp: 5.0.0
-    dev: false
-
-  github.com/bablr-lang/miniparser/d457038d74aa68dd68443d6868592731a581c3b4:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/miniparser/tar.gz/d457038d74aa68dd68443d6868592731a581c3b4}
+  github.com/bablr-lang/miniparser/e17fcf1a2e9c89e14ee047d8f1fe5469c916179f:
+    resolution: {tarball: https://codeload.github.com/bablr-lang/miniparser/tar.gz/e17fcf1a2e9c89e14ee047d8f1fe5469c916179f}
     name: '@bablr/miniparser'
     version: 0.0.0
     dependencies:
