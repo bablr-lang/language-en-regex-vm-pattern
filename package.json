@@ -16,7 +16,7 @@
   "dependencies": {},
   "devDependencies": {
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e",
-    "@bablr/miniparser": "github:bablr-lang/miniparser#6f89c964e7fd0f1423d877b2986df5799c386426",
+    "@bablr/miniparser": "github:bablr-lang/miniparser#3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.47.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
