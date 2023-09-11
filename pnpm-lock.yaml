@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@bablr/eslint-config-base': github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e
+  '@bablr/grammar': github:bablr-lang/grammar#a280340581846073caf47fd531e7f365f4aef5f2
   '@bablr/miniparser': github:bablr-lang/miniparser#3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca
   enhanced-resolve: ^5.12.0
   eslint: ^8.47.0
@@ -9,6 +10,9 @@ specifiers:
   eslint-plugin-import: ^2.27.5
   expect: ^29.6.2
   prettier: ^2.0.5
+
+dependencies:
+  '@bablr/grammar': github.com/bablr-lang/grammar/a280340581846073caf47fd531e7f365f4aef5f2
 
 devDependencies:
   '@bablr/eslint-config-base': github.com/bablr-lang/eslint-config-base/a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e_eslint@8.47.0
@@ -1377,6 +1381,10 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
+  /iter-tools-es/7.5.3:
+    resolution: {integrity: sha512-xj+T3W48RBrooJhafZZ3m8l0JQ/GBmRTcGfqJx4rA/IevwPRkff/919C8EgfQP3HPTnJnHVi+0KgeGKYjoKzvg==}
+    dev: false
+
   /jest-diff/29.6.3:
     resolution: {integrity: sha512-3sw+AdWnwH9sSNohMRKA7JiYUJSRr/WS6+sEFfBuhxU5V5GlEVKfvUn8JuMHE0wqKowemR1C2aHy8VtXbaV8dQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -1996,6 +2004,14 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
     dev: true
+
+  github.com/bablr-lang/grammar/a280340581846073caf47fd531e7f365f4aef5f2:
+    resolution: {tarball: https://codeload.github.com/bablr-lang/grammar/tar.gz/a280340581846073caf47fd531e7f365f4aef5f2}
+    name: '@bablr/grammar'
+    version: 0.0.0
+    dependencies:
+      iter-tools-es: 7.5.3
+    dev: false
 
   github.com/bablr-lang/miniparser/3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca:
     resolution: {tarball: https://codeload.github.com/bablr-lang/miniparser/tar.gz/3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca}

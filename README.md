@@ -12,6 +12,6 @@ The language is the same as [Javascript Regex](https://developer.mozilla.org/en-
 
 - Expressions do not (and will not) support backreferences (`/(.)\0/`).
 
-- Expressions do not support lookahead (yet) (`/(?=abc)/` and `/(?!abc)/`). See [#11](https://github.com/bablr-lang/regex/issues/11).
+- Expressions do not support lookahead (yet) (`/(?=abc)/` and `/(?!abc)/`). See [#11](https://github.com/iter-tools/regex/issues/11).
 
 - Expressions do not support named capture groups (`/(?<name>)/`) (yet).
