@@ -1,13 +1,13 @@
 {
-  "name": "@bablr/miniparser-language-nonbacktracking-js-regex",
+  "name": "@bablr/language-nonbacktracking-js-regex",
   "version": "0.0.0",
-  "description": "A miniparser language for nonbacktracking JS-style regexes",
+  "description": "A BABLR language for nonbacktracking JS-style regexes",
   "engines": {
     "node": ">=12.0.0"
   },
   "type": "module",
   "exports": {
-    ".": "./lib/language.js"
+    ".": "./lib/index.js"
   },
   "files": [
     "lib/**/*.js"
@@ -25,9 +25,6 @@
     "eslint-plugin-import": "^2.27.5",
     "expect": "^29.6.2",
     "prettier": "^2.0.5"
-  },
-  "scripts": {
-    "build": "tsc"
   },
   "repository": "git@github.com:bablr-lang/miniparser-language-nonbacktracking-js-regex.git",
   "homepage": "https://github.com/bablr-lang/miniparser-language-nonbacktracking-js-regex",
