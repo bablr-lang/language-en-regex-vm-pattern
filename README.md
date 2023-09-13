@@ -1,6 +1,6 @@
-# @bablr/miniparser-language-nonbacktracking-js-regex
+# @bablr/language-nonbacktracking-js-regex
 
-This grammar defines a subset of regex that is safe to use in a nonbacktracking regex engine, in particular [@bablr/regex](https://github.com/bablr-lang/regex).
+This BABLR grammar defines a subset of regex that is safe to use in a nonbacktracking regex engine, in particular [@bablr/regex](https://github.com/bablr-lang/regex).
 
 ## The language
 
