@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@bablr/eslint-config-base': github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e
   '@bablr/grammar': github:bablr-lang/grammar#a280340581846073caf47fd531e7f365f4aef5f2
-  '@bablr/miniparser': github:bablr-lang/miniparser#3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca
   enhanced-resolve: ^5.12.0
   eslint: ^8.47.0
   eslint-import-resolver-enhanced-resolve: ^1.0.5
@@ -16,7 +15,6 @@ dependencies:
 
 devDependencies:
   '@bablr/eslint-config-base': github.com/bablr-lang/eslint-config-base/a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e_eslint@8.47.0
-  '@bablr/miniparser': github.com/bablr-lang/miniparser/3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca
   enhanced-resolve: 5.15.0
   eslint: 8.47.0
   eslint-import-resolver-enhanced-resolve: 1.0.5
@@ -816,11 +814,6 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
-    dev: true
-
-  /escape-string-regexp/5.0.0:
-    resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
-    engines: {node: '>=12'}
     dev: true
 
   /eslint-import-resolver-enhanced-resolve/1.0.5:
@@ -2012,11 +2005,3 @@ packages:
     dependencies:
       iter-tools-es: 7.5.3
     dev: false
-
-  github.com/bablr-lang/miniparser/3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca:
-    resolution: {tarball: https://codeload.github.com/bablr-lang/miniparser/tar.gz/3d3a0e2a2d7985f6a2d7857c62eccda72e7080ca}
-    name: '@bablr/miniparser'
-    version: 0.0.0
-    dependencies:
-      escape-string-regexp: 5.0.0
-    dev: true
