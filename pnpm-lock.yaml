@@ -8,10 +8,12 @@ specifiers:
   eslint-import-resolver-enhanced-resolve: ^1.0.5
   eslint-plugin-import: ^2.27.5
   expect: ^29.6.2
+  iter-tools-es: ^7.5.3
   prettier: ^2.0.5
 
 dependencies:
   '@bablr/grammar': github.com/bablr-lang/grammar/a280340581846073caf47fd531e7f365f4aef5f2
+  iter-tools-es: 7.5.3
 
 devDependencies:
   '@bablr/eslint-config-base': github.com/bablr-lang/eslint-config-base/a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e_eslint@8.47.0

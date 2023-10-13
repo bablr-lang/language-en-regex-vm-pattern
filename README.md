@@ -1,6 +1,6 @@
-# @bablr/language-nonbacktracking-js-regex
+# @bablr/language-regex-vm-pattern
 
-This BABLR grammar defines a subset of regex that is safe to use in a nonbacktracking regex engine, in particular [@bablr/regex](https://github.com/bablr-lang/regex).
+This BABLR grammar defines a subset of regex that is safe to use in a nonbacktracking regex engine, in particular [@bablr/regex-vm](https://github.com/bablr-lang/regex-vm).
 
 ## The language
 
