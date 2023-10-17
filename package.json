@@ -13,12 +13,24 @@
     "lib/**/*.js"
   ],
   "sideEffects": false,
+  "scripts": {
+    "generate": "babel lib/grammar.js --out-file lib/grammar.generated.js",
+    "clean": "rm lib/index.generated.js"
+  },
   "dependencies": {
+    "@babel/runtime": "^7.23.2",
+    "@bablr/boot-helpers": "github:bablr-lang/boot-helpers#8170ed0b4ce775256ca897fb34f70581b6fe3a4c",
     "@bablr/grammar": "github:bablr-lang/grammar#a280340581846073caf47fd531e7f365f4aef5f2",
     "iter-tools-es": "^7.5.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/plugin-proposal-decorators": "^7.23.2",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@bablr/boot": "github:bablr-lang/boot#311977defee968aa8454f9de9c7355fb93df0fc9",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e",
+    "babel-plugin-macros": "^3.1.0",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.47.0",
     "eslint-import-resolver-enhanced-resolve": "^1.0.5",
