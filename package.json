@@ -7,7 +7,7 @@
   },
   "type": "module",
   "exports": {
-    ".": "./lib/index.js"
+    ".": "./lib/grammar.generated.js"
   },
   "files": [
     "lib/**/*.js"
@@ -15,7 +15,7 @@
   "sideEffects": false,
   "scripts": {
     "generate": "babel lib/grammar.js --out-file lib/grammar.generated.js",
-    "clean": "rm lib/index.generated.js"
+    "clean": "rm lib/grammar.generated.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.23.2",
