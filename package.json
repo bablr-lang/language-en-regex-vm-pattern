@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.2",
-    "@bablr/boot-helpers": "github:bablr-lang/boot-helpers#90d402f70a294bb024d1d09a9b5991b39e9440fc",
+    "@bablr/boot-helpers": "github:bablr-lang/boot-helpers#f173c649da4974f8583cfdf9bd105cd1d0b6c788",
     "@bablr/grammar": "github:bablr-lang/grammar#a280340581846073caf47fd531e7f365f4aef5f2",
     "iter-tools-es": "^7.5.3"
   },
