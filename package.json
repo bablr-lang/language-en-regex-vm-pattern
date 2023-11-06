@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.2",
-    "@bablr/boot-helpers": "github:bablr-lang/boot-helpers#dfafc4a11c0e7c922285f814ea646719c9add213",
+    "@bablr/boot-helpers": "github:bablr-lang/boot-helpers#bd7e9c7d0ff05804d8aee8a8c1bf5f25189d9f10",
     "@bablr/grammar": "github:bablr-lang/grammar#a280340581846073caf47fd531e7f365f4aef5f2",
     "iter-tools-es": "^7.5.3"
   },
@@ -28,7 +28,7 @@
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.2",
     "@babel/plugin-transform-runtime": "^7.23.2",
-    "@bablr/boot": "github:bablr-lang/boot#7c58fc91d0b3b459d4807b53ad939037b3143935",
+    "@bablr/boot": "github:bablr-lang/boot#a93d41cead7ae5d151549bd23ad5671fbfcfac3e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e",
     "babel-plugin-macros": "^3.1.0",
     "enhanced-resolve": "^5.12.0",
