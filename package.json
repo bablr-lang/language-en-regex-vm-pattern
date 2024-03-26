@@ -20,9 +20,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.2",
-    "@bablr/helpers": "github:bablr-lang/helpers#cc1d37fa91f470dcf3bf1b4f6b05a8350dc52155",
-    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#6080ac9e504fb0392e40cd3ae5ff2e61a2ffc0ba",
-    "@bablr/grammar": "github:bablr-lang/grammar#a280340581846073caf47fd531e7f365f4aef5f2",
+    "@bablr/helpers": "github:bablr-lang/helpers#6d41de3150ba91685a7294136fe3de71750ed8f9",
+    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#bbf50d0ea19e62c7c81e674e58463592e9491f89",
     "iter-tools-es": "^7.5.3"
   },
   "devDependencies": {
@@ -30,11 +29,11 @@
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.2",
     "@babel/plugin-transform-runtime": "^7.23.2",
-    "@bablr/boot": "github:bablr-lang/boot#461dbb0adcc207acf74ff5862787c261e517b55f",
+    "@bablr/boot": "github:bablr-lang/boot#f48073ba9b9cba5941dde92173f845d97e822525",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#a49dbe6861a82d96864ee89fbf0ec1844a8a5e8e",
     "@bablr/test-runner": "github:bablr-lang/test-runner#4f1d33b990a66659830160596e7a8c23a2556520",
     "@qnighy/dedent": "0.1.1",
-    "bablr": "github:bablr-lang/bablr#5f1fb4114a8def739949a2a84224e5eeb28aae2e",
+    "bablr": "github:bablr-lang/bablr#609b17efb939518632c42037acb6d2866ceaa4a7",
     "babel-plugin-macros": "^3.1.0",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.47.0",
