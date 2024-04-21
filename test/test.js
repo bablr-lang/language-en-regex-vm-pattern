@@ -1,9 +1,9 @@
 import { runTests } from '@bablr/test-runner';
-import { buildFullyQualifiedSpamMatcher } from '@bablr/agast-vm-helpers/builders';
+import { buildSpamMatcher } from '@bablr/agast-vm-helpers/builders';
 import { dedent } from '@qnighy/dedent';
 import * as language from '@bablr/language-regex-vm-pattern';
 
-const buildMatcher = (type) => buildFullyQualifiedSpamMatcher(language.canonicalURL, type);
+const buildMatcher = (type) => buildSpamMatcher(null, type);
 
 export const testCases = [
   {
