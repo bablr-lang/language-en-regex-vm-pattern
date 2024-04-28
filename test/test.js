@@ -13,7 +13,7 @@ export const testCases = [
       <>
         <Pattern>
           open:
-          <*Punctuator balanced='/' lexicalSpan='Pattern'>
+          <*Punctuator balanced='/' balancedSpan='Pattern'>
             '/'
           </>
           alternatives[]:
