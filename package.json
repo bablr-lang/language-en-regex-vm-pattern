@@ -9,7 +9,9 @@
   "exports": {
     ".": "./lib/grammar.generated.js"
   },
-  "files": ["lib/**/*.js"],
+  "files": [
+    "lib/**/*.js"
+  ],
   "sideEffects": false,
   "scripts": {
     "generate": "babel lib/grammar.js --out-file lib/grammar.generated.js",
@@ -18,9 +20,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.23.2",
-    "@bablr/helpers": "github:bablr-lang/bablr-helpers#fcc6e8835ac00d208d9d6560682cae48a6bbae17",
-    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#49df418cbd8b3f96318bd3dc52cd18195bc57637",
-    "@bablr/agast-vm-helpers": "github:bablr-lang/agast-vm-helpers#187423544f4d96b981653c8b373062b2578595ee",
+    "@bablr/helpers": "github:bablr-lang/bablr-helpers#8ded1818aef49ccc3c90783aa94516bd6da07050",
+    "@bablr/agast-helpers": "github:bablr-lang/agast-helpers#5a704bd826ed2e8ab6ef0419571433996cea2894",
+    "@bablr/agast-vm-helpers": "github:bablr-lang/agast-vm-helpers#f5e73888656c091c5a9fd1963146ac3bf3426628",
     "iter-tools-es": "^7.5.3"
   },
   "devDependencies": {
@@ -28,11 +30,11 @@
     "@babel/core": "^7.23.0",
     "@babel/plugin-proposal-decorators": "^7.23.2",
     "@babel/plugin-transform-runtime": "^7.23.2",
-    "@bablr/boot": "github:bablr-lang/boot#4b00260707fc8f508499f9931f64cefca1876ebe",
+    "@bablr/boot": "github:bablr-lang/boot#de245b2262eb69b64a4be5edbb621b93e2b1e65e",
     "@bablr/eslint-config-base": "github:bablr-lang/eslint-config-base#49f5952efed27f94ee9b94340eb1563c440bf64e",
     "@bablr/test-runner": "github:bablr-lang/test-runner#4f1d33b990a66659830160596e7a8c23a2556520",
     "@qnighy/dedent": "0.1.1",
-    "bablr": "github:bablr-lang/bablr#f35dffb20d9385b07ce8c83a133e9585ccfb86bb",
+    "bablr": "github:bablr-lang/bablr#0e60f07b60ab596c482d88efa71609effc3950a6",
     "babel-plugin-macros": "^3.1.0",
     "enhanced-resolve": "^5.12.0",
     "eslint": "^8.47.0",
