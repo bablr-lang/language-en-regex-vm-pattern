@@ -1,4 +1,3 @@
-import { runTests } from '@bablr/test-runner';
 import { buildSpamMatcher } from '@bablr/agast-vm-helpers/builders';
 import { dedent } from '@qnighy/dedent';
 import * as language from '@bablr/language-regex-vm-pattern';
