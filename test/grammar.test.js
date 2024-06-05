@@ -38,6 +38,6 @@ describe('@bablr/language-regex-vm-pattern', () => {
             sticky: null
           </>
         </>
-      </>`);
+      </>\n`);
   });
 });
