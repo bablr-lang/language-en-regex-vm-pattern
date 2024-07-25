@@ -1,6 +1,6 @@
 import { buildTag } from 'bablr';
 import { dedent } from '@qnighy/dedent';
-import * as language from '@bablr/language-regex-vm-pattern';
+import * as language from '@bablr/language-en-regex-vm-pattern';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
 import { expect } from 'expect';
 import { printPrettyCSTML } from '@bablr/agast-helpers/tree';
@@ -9,14 +9,14 @@ let enhancers = undefined;
 
 // enhancers = debugEnhancers;
 
-describe('@bablr/language-regex-vm-pattern', () => {
+describe('@bablr/language-en-regex-vm-pattern', () => {
   describe('Pattern', () => {
     const regex = (...args) =>
       printPrettyCSTML(buildTag(language, 'Pattern', undefined, enhancers)(...args));
 
     it('`//`', () => {
       expect(regex`//`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -35,7 +35,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/2/`', () => {
       expect(regex`/2/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -57,7 +57,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/21/`', () => {
       expect(regex`/21/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -83,7 +83,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/1|2/`', () => {
       expect(regex`/1|2/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -112,7 +112,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/2+/`', () => {
       expect(regex`/2+/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -138,7 +138,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/[-]/`', () => {
       expect(regex`/[-]/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -166,7 +166,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/[--]/`', () => {
       expect(regex`/[--]/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -198,7 +198,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/[---]/`', () => {
       expect(regex`/[---]/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -234,7 +234,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`//i`', () => {
       expect(regex`//i`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -257,7 +257,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`//mi`', () => {
       expect(regex`//mi`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -284,7 +284,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/\\W/`', () => {
       expect(regex`/\W/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -307,7 +307,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
 
     it('`/\\g/`', () => {
       expect(regex`/\g/`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />
@@ -331,7 +331,7 @@ describe('@bablr/language-regex-vm-pattern', () => {
     it('`//<gap>`', () => {
       const flags = buildTag(language, 'Flags', undefined, enhancers)`i`;
       expect(regex`//${flags}`).toEqual(dedent`\
-        <!0:cstml bablr-language='https://bablr.org/languages/core/bablr-regex-pattern'>
+        <!0:cstml bablr-language='https://bablr.org/languages/core/en/bablr-regex-pattern'>
         <>
           <Pattern>
             openToken: <~*Punctuator '/' balanced='/' balancedSpan='Pattern' />

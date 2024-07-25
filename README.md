@@ -1,4 +1,4 @@
-# @bablr/language-regex-vm-pattern
+# @bablr/language-en-regex-vm-pattern
 
 This BABLR grammar defines a subset of regex that is safe to use in a nonbacktracking regex engine, in particular [@bablr/regex-vm](https://github.com/bablr-lang/regex-vm).
 
