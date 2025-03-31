@@ -388,6 +388,66 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
       `);
     });
 
+    it('`/[\\u{1}-\\u{10}]/`', () => {
+      expect(print(regex`/[\u{1}-\u{10ffff}]/`)).toEqual(dedent`\
+        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
+        <$>
+          .:
+          <$Pattern>
+            openToken: <*Punctuator '/' { balanced: '/', balancedSpan: 'Pattern' } />
+            alternatives[]$: []
+            alternatives[]$:
+            <$Alternative>
+              elements[]$: []
+              elements[]+$:
+              <$CharacterClass { negate: false }>
+                openToken: <*Punctuator '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
+                negateToken: null
+                elements[]$: []
+                elements[]+$:
+                <*Character>
+                  @:
+                  <EscapeSequence { cooked: 'u{1}' }>
+                    escape: <*Punctuator '${'\\\\'}' { openSpan: 'Escape' } />
+                    code:
+                    <$EscapeCode { closeSpan: 'Escape' }>
+                      type: <*Keyword 'u' />
+                      openToken: <*Punctuator '{' />
+                      value$: <*UnsignedHexInteger '1' />
+                      closeToken: <*Punctuator '}' />
+                    </>
+                  </>
+                </>
+                ^^^
+                <$CharacterClassRange>
+                  min+$: <//>
+                  sigilToken: <*Punctuator '-' />
+                  max+$:
+                  <*Character>
+                    @:
+                    <EscapeSequence { cooked: 'u{10ffff}' }>
+                      escape: <*Punctuator '${'\\\\'}' { openSpan: 'Escape' } />
+                      code:
+                      <$EscapeCode { closeSpan: 'Escape' }>
+                        type: <*Keyword 'u' />
+                        openToken: <*Punctuator '{' />
+                        value$: <*UnsignedHexInteger '10ffff' />
+                        closeToken: <*Punctuator '}' />
+                      </>
+                    </>
+                  </>
+                </>
+                closeToken: <*Punctuator ']' { balancer: true } />
+              </>
+            </>
+            separatorTokens[]: []
+            closeToken: <*Punctuator '/' { balancer: true } />
+            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+          </>
+        </>
+      `);
+    });
+
     it('`//<gåp>`', () => {
       const flags = buildRegexTag('Flags')`i`;
       expect(print(regex`//${flags}`)).toEqual(dedent`\
