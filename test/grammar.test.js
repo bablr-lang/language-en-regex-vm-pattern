@@ -36,7 +36,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
             </>
             separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
@@ -55,7 +55,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$: <*Character '2' />
             </>
             separatorTokens[]: []
@@ -75,7 +75,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$: <*Character '2' />
               elements[]+$: <*Character '1' />
             </>
@@ -96,14 +96,14 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$: <*Character '1' />
             </>
             separatorTokens[]: []
             separatorTokens[]: <*Punctuator '|' />
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$: <*Character '2' />
             </>
             closeToken: <*Punctuator '/' { balancer: true } />
@@ -122,7 +122,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$: <*Character '2' />
               ^^^
               <$Quantifier { min: 1, max: +Infinity }>
@@ -147,12 +147,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$CharacterClass { negate: false }>
                 openToken: <*Punctuator '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
                 negateToken: null
-                elements[]$: []
+                elements[]+$: []
                 elements[]+$: <*Character '-' />
                 closeToken: <*Punctuator ']' { balancer: true } />
               </>
@@ -174,12 +174,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$CharacterClass { negate: false }>
                 openToken: <*Punctuator '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
                 negateToken: null
-                elements[]$: []
+                elements[]+$: []
                 elements[]+$: <*Character '-' />
                 elements[]+$: <*Character '-' />
                 closeToken: <*Punctuator ']' { balancer: true } />
@@ -202,12 +202,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$CharacterClass { negate: false }>
                 openToken: <*Punctuator '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
                 negateToken: null
-                elements[]$: []
+                elements[]+$: []
                 elements[]+$: <*Character '-' />
                 ^^^
                 <$CharacterClassRange>
@@ -235,7 +235,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
             </>
             separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
@@ -258,7 +258,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
             </>
             separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
@@ -282,7 +282,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$WordCharacterSet { negate: true }>
                 escapeToken: <*Punctuator '${'\\\\'}' />
@@ -306,7 +306,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$Gap>
                 escapeToken: <*Punctuator '${'\\\\'}' />
@@ -330,7 +330,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <*Character>
                 @:
@@ -357,12 +357,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$CharacterClass { negate: false }>
                 openToken: <*Punctuator '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
                 negateToken: null
-                elements[]$: []
+                elements[]+$: []
                 elements[]+$: <*Character ' ' />
                 elements[]+$:
                 <*Character>
@@ -398,12 +398,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
               elements[]+$:
               <$CharacterClass { negate: false }>
                 openToken: <*Punctuator '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
                 negateToken: null
-                elements[]$: []
+                elements[]+$: []
                 elements[]+$:
                 <*Character>
                   @:
@@ -459,7 +459,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: []
             alternatives[]$:
             <$Alternative>
-              elements[]$: []
+              elements[]+$: []
             </>
             separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
