@@ -407,13 +407,13 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 elements[]+$:
                 <*Character>
                   @:
-                  <EscapeSequence { cooked: 'u{1}' }>
+                  <EscapeSequence { cooked: '${'\\'}u0001' }>
                     escape: <*Punctuator '${'\\\\'}' { openSpan: 'Escape' } />
                     code:
-                    <$EscapeCode { closeSpan: 'Escape' }>
+                    <EscapeCode { closeSpan: 'Escape' }>
                       type: <*Keyword 'u' />
                       openToken: <*Punctuator '{' />
-                      value$: <*UnsignedHexInteger '1' />
+                      value: <*UnsignedHexInteger '1' />
                       closeToken: <*Punctuator '}' />
                     </>
                   </>
@@ -425,13 +425,13 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                   max+$:
                   <*Character>
                     @:
-                    <EscapeSequence { cooked: 'u{10ffff}' }>
+                    <EscapeSequence { cooked: '􏿿' }>
                       escape: <*Punctuator '${'\\\\'}' { openSpan: 'Escape' } />
                       code:
-                      <$EscapeCode { closeSpan: 'Escape' }>
+                      <EscapeCode { closeSpan: 'Escape' }>
                         type: <*Keyword 'u' />
                         openToken: <*Punctuator '{' />
-                        value$: <*UnsignedHexInteger '10ffff' />
+                        value: <*UnsignedHexInteger '10ffff' />
                         closeToken: <*Punctuator '}' />
                       </>
                     </>
