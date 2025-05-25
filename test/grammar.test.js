@@ -1,25 +1,23 @@
-import { buildTag, Context } from 'bablr';
+import { buildTag } from 'bablr';
 import { spam } from '@bablr/boot';
 import { dedent } from '@qnighy/dedent';
 import * as language from '@bablr/language-en-regex-vm-pattern';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
 import { expect } from 'expect';
 import { printPrettyCSTML } from '@bablr/helpers/tree';
-import { buildIdentifier, buildString } from '@bablr/helpers/builders';
+import { buildIdentifier } from '@bablr/helpers/builders';
 
 let enhancers = {};
 
 // enhancers = debugEnhancers;
 
-const ctx = Context.from(language, enhancers.bablrProduction);
-
 const buildRegexTag = (type) => {
-  const matcher = spam`<$${buildString(language.canonicalURL)}:${buildIdentifier(type)} />`;
-  return buildTag(ctx, matcher, undefined, { enhancers });
+  const matcher = spam`<$${buildIdentifier(type)} />`;
+  return buildTag(language, matcher, undefined, { enhancers });
 };
 
 const print = (tree) => {
-  return printPrettyCSTML(tree.node, { ctx });
+  return printPrettyCSTML(tree.node);
 };
 
 describe('@bablr/language-en-regex-vm-pattern', () => {
