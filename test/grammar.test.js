@@ -36,7 +36,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             <$Alternative>
               elements[]+$: []
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -56,7 +56,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: []
               elements[]+$: <*Character '2' />
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -77,7 +77,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: <*Character '2' />
               elements[]+$: <*Character '1' />
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -97,8 +97,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: []
               elements[]+$: <*Character '1' />
             </>
-            separatorTokens[]: []
-            separatorTokens[]: <*Punctuator '|' />
+            #separatorTokens[]: []
+            #separatorTokens[]: <*Punctuator '|' />
             alternatives[]$:
             <$Alternative>
               elements[]+$: []
@@ -128,7 +128,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 sigilToken: <*Keyword '+' />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -155,7 +155,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 closeToken: <*Punctuator ']' { balancer: true } />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -183,7 +183,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 closeToken: <*Punctuator ']' { balancer: true } />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -216,7 +216,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 closeToken: <*Punctuator ']' { balancer: true } />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -235,7 +235,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             <$Alternative>
               elements[]+$: []
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$:
             <$Flags { global: false, ignoreCase: true, multiline: false, dotAll: false, unicode: false, sticky: false }>
@@ -258,7 +258,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             <$Alternative>
               elements[]+$: []
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$:
             <$Flags { global: false, ignoreCase: true, multiline: true, dotAll: false, unicode: false, sticky: false }>
@@ -287,7 +287,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 value: <*Keyword 'W' />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -311,7 +311,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 value: <*Keyword 'g' />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -338,7 +338,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 </>
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -378,7 +378,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 sigilToken: <*Keyword '+' />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -438,7 +438,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 closeToken: <*Punctuator ']' { balancer: true } />
               </>
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
@@ -459,7 +459,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             <$Alternative>
               elements[]+$: []
             </>
-            separatorTokens[]: []
+            #separatorTokens[]: []
             closeToken: <*Punctuator '/' { balancer: true } />
             flags$:
             <$Flags { global: false, ignoreCase: true, multiline: false, dotAll: false, unicode: false, sticky: false }>
