@@ -26,7 +26,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`//`', () => {
       expect(print(regex`//`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -45,7 +44,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/2/`', () => {
       expect(print(regex`/2/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -65,7 +63,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/21/`', () => {
       expect(print(regex`/21/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -86,7 +83,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/1|2/`', () => {
       expect(print(regex`/1|2/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -112,7 +108,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/2+/`', () => {
       expect(print(regex`/2+/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -137,7 +132,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/[-]/`', () => {
       expect(print(regex`/[-]/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -164,7 +158,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/[--]/`', () => {
       expect(print(regex`/[--]/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -192,7 +185,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/[---]/`', () => {
       expect(print(regex`/[---]/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -225,7 +217,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`//i`', () => {
       expect(print(regex`//i`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -248,7 +239,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`//mi`', () => {
       expect(print(regex`//mi`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -272,7 +262,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/\\W/`', () => {
       expect(print(regex`/\W/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -296,7 +285,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/\\g/`', () => {
       expect(print(regex`/\g/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -320,7 +308,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/\\</`', () => {
       expect(print(regex`/\</`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -347,7 +334,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/[ \\t]+/`', () => {
       expect(print(regex`/[ \t]+/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -388,7 +374,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
 
     it('`/[\\u{1}-\\u{10}]/`', () => {
       expect(print(regex`/[\u{1}-\u{10ffff}]/`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
@@ -449,7 +434,6 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`//<gåp>`', () => {
       const flags = buildRegexTag('Flags')`i`;
       expect(print(regex`//${flags}`)).toEqual(dedent`\
-        <!0:cstml { bablrLanguage: 'https://bablr.org/languages/core/en/bablr-regex-pattern' }>
         <$_>
           .:
           <$Pattern>
