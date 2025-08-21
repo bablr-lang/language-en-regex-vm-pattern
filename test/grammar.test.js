@@ -17,7 +17,7 @@ const buildRegexTag = (type) => {
 };
 
 const print = (tree) => {
-  return printPrettyCSTML(tree.node);
+  return printPrettyCSTML(tree);
 };
 
 describe('@bablr/language-en-regex-vm-pattern', () => {
