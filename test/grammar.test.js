@@ -69,7 +69,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
           <$Alternative>
             elements[]+$: <*Character '1' />
           </>
-          #separatorTokens[]: <*Punctuator '|' />
+          separatorTokens[]: <*Punctuator '|' />
           alternatives[]$:
           <$Alternative>
             elements[]+$: <*Character '2' />
