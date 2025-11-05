@@ -1,7 +1,7 @@
 import { buildTag } from 'bablr';
 import { spam } from '@bablr/boot';
 import { dedent } from '@qnighy/dedent';
-import * as language from '@bablr/language-en-regex-vm-pattern';
+import language from '@bablr/language-en-regex-vm-pattern';
 import { debugEnhancers } from '@bablr/helpers/enhancers';
 import { expect } from 'expect';
 import { printPrettyCSTML } from '@bablr/helpers/tree';
