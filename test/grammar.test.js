@@ -27,9 +27,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`//`', () => {
       expect(print(regex`//`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]: <$Alternative />
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -37,12 +37,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/2/`', () => {
       expect(print(regex`/2/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+: <*Character '2' />
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -50,13 +50,13 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/21/`', () => {
       expect(print(regex`/21/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+: <*Character '2' />
             elements[]+: <*Character '1' />
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -64,7 +64,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/1|2/`', () => {
       expect(print(regex`/1|2/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+: <*Character '1' />
@@ -74,7 +74,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
           <$Alternative>
             elements[]+: <*Character '2' />
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -82,7 +82,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/2+/`', () => {
       expect(print(regex`/2+/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+: <*Character '2' />
@@ -92,7 +92,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               sigilToken*: <*Keyword '+' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -100,18 +100,18 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/[-]/`', () => {
       expect(print(regex`/[-]/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
             <$CharacterClass { negate: false }>
-              openToken*: <* '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
+              openToken*: <* '[' />
               negateToken*: null
               elements[]+: <*Character '-' />
-              closeToken*: <* ']' { balancer: true } />
+              closeToken*: <* ']' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -119,19 +119,19 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/[--]/`', () => {
       expect(print(regex`/[--]/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
             <$CharacterClass { negate: false }>
-              openToken*: <* '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
+              openToken*: <* '[' />
               negateToken*: null
               elements[]+: <*Character '-' />
               elements[]+: <*Character '-' />
-              closeToken*: <* ']' { balancer: true } />
+              closeToken*: <* ']' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -139,12 +139,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/[---]/`', () => {
       expect(print(regex`/[---]/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
             <$CharacterClass { negate: false }>
-              openToken*: <* '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
+              openToken*: <* '[' />
               negateToken*: null
               elements[]+: <*Character '-' />
               ^^^
@@ -153,10 +153,10 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 sigilToken*: <* '-' />
                 max+: <*Character '-' />
               </>
-              closeToken*: <* ']' { balancer: true } />
+              closeToken*: <* ']' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -164,9 +164,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`//i`', () => {
       expect(print(regex`//i`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]: <$Alternative />
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags:
           <$Flags { global: false, ignoreCase: true, multiline: false, dotAll: false, unicode: false, sticky: false }>
             tokens[]*: <*Keyword 'i' />
@@ -177,9 +177,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`//mi`', () => {
       expect(print(regex`//mi`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]: <$Alternative />
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags:
           <$Flags { global: false, ignoreCase: true, multiline: true, dotAll: false, unicode: false, sticky: false }>
             tokens[]*: <*Keyword 'm' />
@@ -191,7 +191,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/\\W/`', () => {
       expect(print(regex`/\W/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
@@ -200,7 +200,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               value*: <*Keyword 'W' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -208,7 +208,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/\\g/`', () => {
       expect(print(regex`/\g/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
@@ -217,7 +217,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               value*: <*Keyword 'g' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -225,19 +225,19 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/\\</`', () => {
       expect(print(regex`/\</`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
             <*Character>
               @:
               <EscapeSequence { cooked: '<' }>
-                escape*: <* '${'\\\\'}' { openSpan: 'Escape' } />
-                code*: <*Keyword '<' { closeSpan: 'Escape' } />
+                escape*: <* '${'\\\\'}' />
+                code*: <*Keyword '<' />
               </>
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>\n`);
     });
@@ -245,23 +245,23 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/[ \\t]+/`', () => {
       expect(print(regex`/[ \t]+/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
             <$CharacterClass { negate: false }>
-              openToken*: <* '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
+              openToken*: <* '[' />
               negateToken*: null
               elements[]+: <*Character ' ' />
               elements[]+:
               <*Character>
                 @:
                 <EscapeSequence { cooked: '${'\\t'}' }>
-                  escape*: <* '${'\\\\'}' { openSpan: 'Escape' } />
-                  code*: <*Keyword 't' { closeSpan: 'Escape' } />
+                  escape*: <* '${'\\\\'}' />
+                  code*: <*Keyword 't' />
                 </>
               </>
-              closeToken*: <* ']' { balancer: true } />
+              closeToken*: <* ']' />
             </>
             ^^^
             <$Quantifier { min: 1, max: +Infinity }>
@@ -269,7 +269,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               sigilToken*: <*Keyword '+' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>
       `);
@@ -278,20 +278,20 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
     it('`/[\\u{1}-\\u{10}]/`', () => {
       expect(print(regex`/[\u{1}-\u{10ffff}]/`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]:
           <$Alternative>
             elements[]+:
             <$CharacterClass { negate: false }>
-              openToken*: <* '[' { balancedSpan: 'CharacterClass', balanced: ']' } />
+              openToken*: <* '[' />
               negateToken*: null
               elements[]+:
               <*Character>
                 @:
                 <EscapeSequence { cooked: '${'\\'}u0001' }>
-                  escape*: <* '${'\\\\'}' { openSpan: 'Escape' } />
+                  escape*: <* '${'\\\\'}' />
                   code*:
-                  <EscapeCode { closeSpan: 'Escape' }>
+                  <EscapeCode>
                     type*: <*Keyword 'u' />
                     openToken*: <* '{' />
                     value: <*UnsignedHexInteger '1' />
@@ -307,9 +307,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 <*Character>
                   @:
                   <EscapeSequence { cooked: '􏿿' }>
-                    escape*: <* '${'\\\\'}' { openSpan: 'Escape' } />
+                    escape*: <* '${'\\\\'}' />
                     code*:
-                    <EscapeCode { closeSpan: 'Escape' }>
+                    <EscapeCode>
                       type*: <*Keyword 'u' />
                       openToken*: <* '{' />
                       value: <*UnsignedHexInteger '10ffff' />
@@ -318,10 +318,10 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                   </>
                 </>
               </>
-              closeToken*: <* ']' { balancer: true } />
+              closeToken*: <* ']' />
             </>
           </>
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
         </>
       `);
@@ -331,9 +331,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
       const flags = buildRegexTag('Flags')`i`;
       expect(print(regex`//${flags}`)).toEqual(dedent`\
         <$Pattern>
-          openToken*: <* '/' { balanced: '/', balancedSpan: 'Pattern' } />
+          openToken*: <* '/' />
           alternatives[]: <$Alternative />
-          closeToken*: <* '/' { balancer: true } />
+          closeToken*: <* '/' />
           flags:
           <$Flags { global: false, ignoreCase: true, multiline: false, dotAll: false, unicode: false, sticky: false }>
             tokens[]*: <*Keyword 'i' />
