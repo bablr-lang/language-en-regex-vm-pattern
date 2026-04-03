@@ -263,7 +263,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               <*Character>
                 @:
                 <EscapeSequence { cooked: '<' }>
-                  escape*: <* '${'\\\\'}' />
+                  sigilToken*: <* '${'\\\\'}' />
                   code*: <*Keyword '<' />
                 </>
               </>
@@ -290,7 +290,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 <*Character>
                   @:
                   <EscapeSequence { cooked: '${'\\t'}' }>
-                    escape*: <* '${'\\\\'}' />
+                    sigilToken*: <* '${'\\\\'}' />
                     code*: <*Keyword 't' />
                   </>
                 </>
@@ -324,7 +324,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 <*Character>
                   @:
                   <EscapeSequence { cooked: '${'\\'}u0001' }>
-                    escape*: <* '${'\\\\'}' />
+                    sigilToken*: <* '${'\\\\'}' />
                     code*:
                     <EscapeCode>
                       type*: <*Keyword 'u' />
@@ -342,7 +342,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                   <*Character>
                     @:
                     <EscapeSequence { cooked: '􏿿' }>
-                      escape*: <* '${'\\\\'}' />
+                      sigilToken*: <* '${'\\\\'}' />
                       code*:
                       <EscapeCode>
                         type*: <*Keyword 'u' />
