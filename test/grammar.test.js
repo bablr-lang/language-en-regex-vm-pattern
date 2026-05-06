@@ -1,13 +1,13 @@
 import { buildTag } from 'bablr';
-import { spam } from '@bablr/boot';
 import { dedent } from '@qnighy/dedent';
 import language from '@bablr/language-en-regex-vm-pattern';
 import { expect } from 'expect';
 import { printPrettyCSTML } from '@bablr/helpers/tree';
 import { buildIdentifier } from '@bablr/helpers/builders';
+import { m } from '@bablr/helpers/grammar';
 
 const buildRegexTag = (type) => {
-  const matcher = spam`<$${buildIdentifier(type)} />`;
+  const matcher = m`<$${type} />`;
   return buildTag(language, matcher, undefined);
 };
 
