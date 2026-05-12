@@ -28,7 +28,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/2/`', () => {
@@ -44,7 +45,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/21/`', () => {
@@ -61,7 +63,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/1|2/`', () => {
@@ -82,7 +85,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/2+/`', () => {
@@ -103,7 +107,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/[-]/`', () => {
@@ -124,7 +129,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/[--]/`', () => {
@@ -146,7 +152,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/[---]/`', () => {
@@ -173,7 +180,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`//i`', () => {
@@ -189,7 +197,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               tokens[]*: <*Keyword 'i' />
             </>
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`//mi`', () => {
@@ -206,7 +215,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               tokens[]*: <*Keyword 'i' />
             </>
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/\\W/`', () => {
@@ -226,7 +236,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/\\g/`', () => {
@@ -246,7 +257,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/\\</`', () => {
@@ -269,7 +281,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
           </>
-        </>\n`);
+        </>
+      `);
     });
 
     it('`/[ \\t]+/`', () => {
@@ -375,7 +388,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               tokens[]*: <*Keyword 'i' />
             </>
           </>
-        </>\n`);
+        </>
+      `);
     });
   });
 });
