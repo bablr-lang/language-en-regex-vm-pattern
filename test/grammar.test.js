@@ -26,7 +26,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$: <$Alternative />
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -43,7 +43,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: <*Character '2' />
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -61,7 +61,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: <*Character '1' />
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -83,7 +83,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: <*Character '2' />
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -99,13 +99,13 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             <$Alternative>
               elements[]+$: <*Character '2' />
               ^^^
-              <$Quantifier { min: 1, max: +Infinity }>
+              <$Quantifier { max: +Infinity, min: 1 }>
                 element+$: <//>
                 sigilToken*: <*Keyword '+' />
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -127,7 +127,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -150,7 +150,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -178,7 +178,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -193,7 +193,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: <$Alternative />
             closeToken*: <* '/' />
             flags$:
-            <$Flags { global: false, ignoreCase: true, multiline: false, dotAll: false, unicode: false, sticky: false }>
+            <$Flags { dotAll: false, global: false, ignoreCase: true, multiline: false, sticky: false, unicode: false }>
               tokens[]*: <*Keyword 'i' />
             </>
           </>
@@ -210,7 +210,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: <$Alternative />
             closeToken*: <* '/' />
             flags$:
-            <$Flags { global: false, ignoreCase: true, multiline: true, dotAll: false, unicode: false, sticky: false }>
+            <$Flags { dotAll: false, global: false, ignoreCase: true, multiline: true, sticky: false, unicode: false }>
               tokens[]*: <*Keyword 'm' />
               tokens[]*: <*Keyword 'i' />
             </>
@@ -234,7 +234,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -255,7 +255,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -272,7 +272,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$: <*Character @'<' @@'\\\\<' />
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -294,13 +294,13 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
                 closeToken*: <* ']' />
               </>
               ^^^
-              <$Quantifier { min: 1, max: +Infinity }>
+              <$Quantifier { max: +Infinity, min: 1 }>
                 element+$: <//>
                 sigilToken*: <*Keyword '+' />
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -328,7 +328,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               </>
             </>
             closeToken*: <* '/' />
-            flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
+            flags$: <$Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
           </>
         </>
       `);
@@ -344,7 +344,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$: <$Alternative />
             closeToken*: <* '/' />
             flags$:
-            <$Flags { global: false, ignoreCase: true, multiline: false, dotAll: false, unicode: false, sticky: false }>
+            <$Flags { dotAll: false, global: false, ignoreCase: true, multiline: false, sticky: false, unicode: false }>
               tokens[]*: <*Keyword 'i' />
             </>
           </>
