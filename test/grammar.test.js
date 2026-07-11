@@ -2,7 +2,7 @@ import { buildTag } from 'bablr';
 import { dedent } from '@qnighy/dedent';
 import language from '@bablr/language-en-regex-vm-pattern';
 import { expect } from 'expect';
-import { printPrettyCSTML } from '@bablr/helpers/tree';
+import { printCSTML } from '@bablr/helpers/tree';
 import { m } from '@bablr/helpers/grammar';
 
 const buildRegexTag = (type) => {
@@ -11,7 +11,7 @@ const buildRegexTag = (type) => {
 };
 
 const print = (tree) => {
-  return printPrettyCSTML(tree);
+  return printCSTML(tree);
 };
 
 describe('@bablr/language-en-regex-vm-pattern', () => {
@@ -269,14 +269,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <$Alternative>
-              elements[]+$:
-              <*Character>
-                @:
-                <EscapeSequence { cooked: '<' }>
-                  sigilToken*: <* '${'\\\\'}' />
-                  code*: <*Keyword '<' />
-                </>
-              </>
+              elements[]+$: <*Character @'<' @@'\\\\<' />
             </>
             closeToken*: <* '/' />
             flags$: <$Flags { global: false, ignoreCase: false, multiline: false, dotAll: false, unicode: false, sticky: false } />
@@ -297,14 +290,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               <$CharacterClass { negate: false }>
                 openToken*: <* '[' />
                 elements[]+$: <*Character ' ' />
-                elements[]+$:
-                <*Character>
-                  @:
-                  <EscapeSequence { cooked: '${'\\t'}' }>
-                    sigilToken*: <* '${'\\\\'}' />
-                    code*: <*Keyword 't' />
-                  </>
-                </>
+                elements[]+$: <*Character @'\\t' @@'\\\\t' />
                 closeToken*: <* ']' />
               </>
               ^^^
@@ -320,7 +306,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
       `);
     });
 
-    it('`/[\\u{1}-\\u{10}]/`', () => {
+    it('`/[\\u{1}-\\u{10ffff}]/`', () => {
       expect(print(regex`/[\u{1}-\u{10ffff}]/`)).toEqual(dedent`
         <$_>
           _:
@@ -331,38 +317,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$:
               <$CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$:
-                <*Character>
-                  @:
-                  <EscapeSequence { cooked: '${'\\'}u0001' }>
-                    sigilToken*: <* '${'\\\\'}' />
-                    code*:
-                    <EscapeCode>
-                      type*: <*Keyword 'u' />
-                      openToken*: <* '{' />
-                      value: <*UnsignedHexInteger '1' />
-                      closeToken*: <* '}' />
-                    </>
-                  </>
-                </>
+                elements[]+$: <*Character @'\\u0001' @@'\\\\u{1}' />
                 ^^^
                 <$CharacterClassRange>
                   min+$: <//>
                   sigilToken*: <* '-' />
-                  max+$:
-                  <*Character>
-                    @:
-                    <EscapeSequence { cooked: '􏿿' }>
-                      sigilToken*: <* '${'\\\\'}' />
-                      code*:
-                      <EscapeCode>
-                        type*: <*Keyword 'u' />
-                        openToken*: <* '{' />
-                        value: <*UnsignedHexInteger '10ffff' />
-                        closeToken*: <* '}' />
-                      </>
-                    </>
-                  </>
+                  max+$: <*Character @'\u{10ffff}' @@'\\\\u{10ffff}' />
                 </>
                 closeToken*: <* ']' />
               </>
