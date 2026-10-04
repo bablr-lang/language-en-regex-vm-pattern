@@ -97,10 +97,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$: <*Character '2' />
-              ^^^
+              elements[]+$:
               <Quantifier { max: +Infinity, min: 1 }>
-                element+$: <//>
+                element+$: <*Character '2' />
                 sigilToken*: <*Keyword '+' />
               </>
             </>
@@ -167,10 +166,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$:
               <CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$: <*Character '-' />
-                ^^^
+                elements[]+$:
                 <CharacterClassRange>
-                  min+$: <//>
+                  min+$: <*Character '-' />
                   sigilToken*: <* '-' />
                   max+$: <*Character '-' />
                 </>
@@ -287,15 +285,14 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             alternatives[]$:
             <Alternative>
               elements[]+$:
-              <CharacterClass { negate: false }>
-                openToken*: <* '[' />
-                elements[]+$: <*Character ' ' />
-                elements[]+$: <*Character @'\\t' @@'\\\\t' />
-                closeToken*: <* ']' />
-              </>
-              ^^^
               <Quantifier { max: +Infinity, min: 1 }>
-                element+$: <//>
+                element+$: 
+                <CharacterClass { negate: false }>
+                  openToken*: <* '[' />
+                  elements[]+$: <*Character ' ' />
+                  elements[]+$: <*Character @'\\t' @@'\\\\t' />
+                  closeToken*: <* ']' />
+                </>
                 sigilToken*: <*Keyword '+' />
               </>
             </>
@@ -317,10 +314,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
               elements[]+$:
               <CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$: <*Character @'\\u0001' @@'\\\\u{1}' />
-                ^^^
+                elements[]+$:
                 <CharacterClassRange>
-                  min+$: <//>
+                  min+$: <*Character @'\\u0001' @@'\\\\u{1}' />
                   sigilToken*: <* '-' />
                   max+$: <*Character @'\u{10ffff}' @@'\\\\u{10ffff}' />
                 </>
