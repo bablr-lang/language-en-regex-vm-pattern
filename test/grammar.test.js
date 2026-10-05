@@ -286,7 +286,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             <Alternative>
               elements[]+$:
               <Quantifier { max: +Infinity, min: 1 }>
-                element+$: 
+                element+$:
                 <CharacterClass { negate: false }>
                   openToken*: <* '[' />
                   elements[]+$: <*Character ' ' />
