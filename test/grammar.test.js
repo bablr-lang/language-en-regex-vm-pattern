@@ -2,7 +2,7 @@ import { buildTag } from 'bablr';
 import { dedent } from '@qnighy/dedent';
 import language from '@bablr/language-en-regex-vm-pattern';
 import { expect } from 'expect';
-import { printCSTML } from '@bablr/helpers/tree';
+import { printCSTML, hoist, streamFromTree } from '@bablr/agast-helpers/stream';
 import { m } from '@bablr/helpers/grammar';
 
 const buildRegexTag = (type) => {
@@ -11,7 +11,7 @@ const buildRegexTag = (type) => {
 };
 
 const print = (tree) => {
-  return printCSTML(tree);
+  return printCSTML(hoist(streamFromTree(tree)));
 };
 
 describe('@bablr/language-en-regex-vm-pattern', () => {
@@ -40,7 +40,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$: <*Character '2' />
+              elements[]$: <*Character '2' />
             </>
             closeToken*: <* '/' />
             flags$: <Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
@@ -57,8 +57,8 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$: <*Character '2' />
-              elements[]+$: <*Character '1' />
+              elements[]$: <*Character '2' />
+              elements[]$: <*Character '1' />
             </>
             closeToken*: <* '/' />
             flags$: <Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
@@ -75,12 +75,12 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$: <*Character '1' />
+              elements[]$: <*Character '1' />
             </>
             #separatorTokens: <* '|' />
             alternatives[]$:
             <Alternative>
-              elements[]+$: <*Character '2' />
+              elements[]$: <*Character '2' />
             </>
             closeToken*: <* '/' />
             flags$: <Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
@@ -97,9 +97,9 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <Quantifier { max: +Infinity, min: 1 }>
-                element+$: <*Character '2' />
+                element$: <*Character '2' />
                 sigilToken*: <*Keyword '+' />
               </>
             </>
@@ -118,10 +118,10 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$: <*Character '-' />
+                elements[]$: <*Character '-' />
                 closeToken*: <* ']' />
               </>
             </>
@@ -140,11 +140,11 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$: <*Character '-' />
-                elements[]+$: <*Character '-' />
+                elements[]$: <*Character '-' />
+                elements[]$: <*Character '-' />
                 closeToken*: <* ']' />
               </>
             </>
@@ -163,14 +163,14 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$:
+                elements[]$:
                 <CharacterClassRange>
-                  min+$: <*Character '-' />
+                  min$: <*Character '-' />
                   sigilToken*: <* '-' />
-                  max+$: <*Character '-' />
+                  max$: <*Character '-' />
                 </>
                 closeToken*: <* ']' />
               </>
@@ -225,7 +225,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <WordCharacterSet { negate: true }>
                 escapeToken*: <* '${'\\\\'}' />
                 value*: <*Keyword 'W' />
@@ -246,7 +246,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <Gap>
                 escapeToken*: <* '${'\\\\'}' />
                 value*: <*Keyword 'g' />
@@ -267,7 +267,7 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$: <*Character @'<' @@'\\\\<' />
+              elements[]$: <*Character @'<' @@'\\\\<' />
             </>
             closeToken*: <* '/' />
             flags$: <Flags { dotAll: false, global: false, ignoreCase: false, multiline: false, sticky: false, unicode: false } />
@@ -284,13 +284,13 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <Quantifier { max: +Infinity, min: 1 }>
-                element+$:
+                element$:
                 <CharacterClass { negate: false }>
                   openToken*: <* '[' />
-                  elements[]+$: <*Character ' ' />
-                  elements[]+$: <*Character @'\\t' @@'\\\\t' />
+                  elements[]$: <*Character ' ' />
+                  elements[]$: <*Character @'\\t' @@'\\\\t' />
                   closeToken*: <* ']' />
                 </>
                 sigilToken*: <*Keyword '+' />
@@ -311,14 +311,14 @@ describe('@bablr/language-en-regex-vm-pattern', () => {
             openToken*: <* '/' />
             alternatives[]$:
             <Alternative>
-              elements[]+$:
+              elements[]$:
               <CharacterClass { negate: false }>
                 openToken*: <* '[' />
-                elements[]+$:
+                elements[]$:
                 <CharacterClassRange>
-                  min+$: <*Character @'\\u0001' @@'\\\\u{1}' />
+                  min$: <*Character @'\\u0001' @@'\\\\u{1}' />
                   sigilToken*: <* '-' />
-                  max+$: <*Character @'\u{10ffff}' @@'\\\\u{10ffff}' />
+                  max$: <*Character @'\u{10ffff}' @@'\\\\u{10ffff}' />
                 </>
                 closeToken*: <* ']' />
               </>
